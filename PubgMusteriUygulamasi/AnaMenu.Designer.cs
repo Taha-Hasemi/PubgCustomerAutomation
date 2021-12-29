@@ -51,15 +51,7 @@ namespace PubgMusteriUygulamasi
             this.button1 = new System.Windows.Forms.Button();
             this.Oyun = new System.Windows.Forms.Label();
             this.OyunTarihi = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.fillByOyunTarihToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByOyunTarihToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.fillByOyunSaatToolStrip = new System.Windows.Forms.ToolStrip();
-            this.fillByOyunSaatToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.m24BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pubgGameDataSet3 = new PubgMusteriUygulamasi.PubgGameDataSet3();
-            this.m24TableAdapter = new PubgMusteriUygulamasi.PubgGameDataSet3TableAdapters.m24TableAdapter();
             this.ıDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adSoyadDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kullanilacakSilahDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -67,23 +59,29 @@ namespace PubgMusteriUygulamasi
             this.oyunTarihDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.oyunSayiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tamamlanmaDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.m24BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pubgGameDataSet3 = new PubgMusteriUygulamasi.PubgGameDataSet3();
+            this.fillByOyunTarihToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByOyunTarihToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.fillByOyunSaatToolStrip = new System.Windows.Forms.ToolStrip();
+            this.fillByOyunSaatToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.m24TableAdapter = new PubgMusteriUygulamasi.PubgGameDataSet3TableAdapters.m24TableAdapter();
             this.yenileToolStrip = new System.Windows.Forms.ToolStrip();
             this.yenileToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.fillByOyunSayiToolStrip = new System.Windows.Forms.ToolStrip();
             this.fillByOyunSayiToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.txtSaat = new System.Windows.Forms.TextBox();
-            this.txtDakika = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dttmedtOyunSaat = new System.Windows.Forms.DateTimePicker();
             this.kayıt.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOyunSayisi)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.fillByOyunTarihToolStrip.SuspendLayout();
-            this.fillByOyunSaatToolStrip.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.m24BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pubgGameDataSet3)).BeginInit();
+            this.fillByOyunTarihToolStrip.SuspendLayout();
+            this.fillByOyunSaatToolStrip.SuspendLayout();
             this.yenileToolStrip.SuspendLayout();
             this.fillByOyunSayiToolStrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lbladsoyad
@@ -216,9 +214,7 @@ namespace PubgMusteriUygulamasi
             // kayıt
             // 
             this.kayıt.BackColor = System.Drawing.Color.White;
-            this.kayıt.Controls.Add(this.label8);
-            this.kayıt.Controls.Add(this.txtDakika);
-            this.kayıt.Controls.Add(this.txtSaat);
+            this.kayıt.Controls.Add(this.dttmedtOyunSaat);
             this.kayıt.Controls.Add(this.numOyunSayisi);
             this.kayıt.Controls.Add(this.cmbKulanilacakSilah);
             this.kayıt.Controls.Add(this.dttmedtOyunTarihi);
@@ -304,16 +300,6 @@ namespace PubgMusteriUygulamasi
             this.OyunTarihi.TabIndex = 16;
             this.OyunTarihi.Text = "Oyun Tarihi:";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::PubgMusteriUygulamasi.Properties.Resources.maxresdefault;
-            this.pictureBox1.Location = new System.Drawing.Point(627, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(245, 152);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
@@ -335,58 +321,6 @@ namespace PubgMusteriUygulamasi
             this.dataGridView1.Size = new System.Drawing.Size(609, 192);
             this.dataGridView1.TabIndex = 25;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            // 
-            // fillByOyunTarihToolStrip
-            // 
-            this.fillByOyunTarihToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.fillByOyunTarihToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByOyunTarihToolStripButton});
-            this.fillByOyunTarihToolStrip.Location = new System.Drawing.Point(66, 323);
-            this.fillByOyunTarihToolStrip.Name = "fillByOyunTarihToolStrip";
-            this.fillByOyunTarihToolStrip.Size = new System.Drawing.Size(105, 25);
-            this.fillByOyunTarihToolStrip.TabIndex = 26;
-            this.fillByOyunTarihToolStrip.Text = "fillByOyunTarihToolStrip";
-            // 
-            // fillByOyunTarihToolStripButton
-            // 
-            this.fillByOyunTarihToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByOyunTarihToolStripButton.Name = "fillByOyunTarihToolStripButton";
-            this.fillByOyunTarihToolStripButton.Size = new System.Drawing.Size(93, 22);
-            this.fillByOyunTarihToolStripButton.Text = "FillByOyunTarih";
-            this.fillByOyunTarihToolStripButton.Click += new System.EventHandler(this.fillByOyunTarihToolStripButton_Click);
-            // 
-            // fillByOyunSaatToolStrip
-            // 
-            this.fillByOyunSaatToolStrip.Dock = System.Windows.Forms.DockStyle.None;
-            this.fillByOyunSaatToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fillByOyunSaatToolStripButton});
-            this.fillByOyunSaatToolStrip.Location = new System.Drawing.Point(171, 323);
-            this.fillByOyunSaatToolStrip.Name = "fillByOyunSaatToolStrip";
-            this.fillByOyunSaatToolStrip.Size = new System.Drawing.Size(102, 25);
-            this.fillByOyunSaatToolStrip.TabIndex = 27;
-            this.fillByOyunSaatToolStrip.Text = "fillByOyunSaatToolStrip";
-            // 
-            // fillByOyunSaatToolStripButton
-            // 
-            this.fillByOyunSaatToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.fillByOyunSaatToolStripButton.Name = "fillByOyunSaatToolStripButton";
-            this.fillByOyunSaatToolStripButton.Size = new System.Drawing.Size(90, 22);
-            this.fillByOyunSaatToolStripButton.Text = "FillByOyunSaat";
-            this.fillByOyunSaatToolStripButton.Click += new System.EventHandler(this.fillByOyunSaatToolStripButton_Click);
-            // 
-            // m24BindingSource
-            // 
-            this.m24BindingSource.DataMember = "m24";
-            this.m24BindingSource.DataSource = this.pubgGameDataSet3;
-            // 
-            // pubgGameDataSet3
-            // 
-            this.pubgGameDataSet3.DataSetName = "PubgGameDataSet3";
-            this.pubgGameDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // m24TableAdapter
-            // 
-            this.m24TableAdapter.ClearBeforeFill = true;
             // 
             // ıDDataGridViewTextBoxColumn
             // 
@@ -434,6 +368,58 @@ namespace PubgMusteriUygulamasi
             this.tamamlanmaDataGridViewCheckBoxColumn.Name = "tamamlanmaDataGridViewCheckBoxColumn";
             this.tamamlanmaDataGridViewCheckBoxColumn.Width = 75;
             // 
+            // m24BindingSource
+            // 
+            this.m24BindingSource.DataMember = "m24";
+            this.m24BindingSource.DataSource = this.pubgGameDataSet3;
+            // 
+            // pubgGameDataSet3
+            // 
+            this.pubgGameDataSet3.DataSetName = "PubgGameDataSet3";
+            this.pubgGameDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fillByOyunTarihToolStrip
+            // 
+            this.fillByOyunTarihToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.fillByOyunTarihToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByOyunTarihToolStripButton});
+            this.fillByOyunTarihToolStrip.Location = new System.Drawing.Point(66, 323);
+            this.fillByOyunTarihToolStrip.Name = "fillByOyunTarihToolStrip";
+            this.fillByOyunTarihToolStrip.Size = new System.Drawing.Size(105, 25);
+            this.fillByOyunTarihToolStrip.TabIndex = 26;
+            this.fillByOyunTarihToolStrip.Text = "fillByOyunTarihToolStrip";
+            // 
+            // fillByOyunTarihToolStripButton
+            // 
+            this.fillByOyunTarihToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByOyunTarihToolStripButton.Name = "fillByOyunTarihToolStripButton";
+            this.fillByOyunTarihToolStripButton.Size = new System.Drawing.Size(93, 22);
+            this.fillByOyunTarihToolStripButton.Text = "FillByOyunTarih";
+            this.fillByOyunTarihToolStripButton.Click += new System.EventHandler(this.fillByOyunTarihToolStripButton_Click);
+            // 
+            // fillByOyunSaatToolStrip
+            // 
+            this.fillByOyunSaatToolStrip.Dock = System.Windows.Forms.DockStyle.None;
+            this.fillByOyunSaatToolStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fillByOyunSaatToolStripButton});
+            this.fillByOyunSaatToolStrip.Location = new System.Drawing.Point(171, 323);
+            this.fillByOyunSaatToolStrip.Name = "fillByOyunSaatToolStrip";
+            this.fillByOyunSaatToolStrip.Size = new System.Drawing.Size(102, 25);
+            this.fillByOyunSaatToolStrip.TabIndex = 27;
+            this.fillByOyunSaatToolStrip.Text = "fillByOyunSaatToolStrip";
+            // 
+            // fillByOyunSaatToolStripButton
+            // 
+            this.fillByOyunSaatToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.fillByOyunSaatToolStripButton.Name = "fillByOyunSaatToolStripButton";
+            this.fillByOyunSaatToolStripButton.Size = new System.Drawing.Size(90, 22);
+            this.fillByOyunSaatToolStripButton.Text = "FillByOyunSaat";
+            this.fillByOyunSaatToolStripButton.Click += new System.EventHandler(this.fillByOyunSaatToolStripButton_Click);
+            // 
+            // m24TableAdapter
+            // 
+            this.m24TableAdapter.ClearBeforeFill = true;
+            // 
             // yenileToolStrip
             // 
             this.yenileToolStrip.Dock = System.Windows.Forms.DockStyle.None;
@@ -472,33 +458,23 @@ namespace PubgMusteriUygulamasi
             this.fillByOyunSayiToolStripButton.Text = "FillByOyunSayi";
             this.fillByOyunSayiToolStripButton.Click += new System.EventHandler(this.fillByOyunSayiToolStripButton_Click);
             // 
-            // txtSaat
+            // pictureBox1
             // 
-            this.txtSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaat.Location = new System.Drawing.Point(427, 186);
-            this.txtSaat.MaxLength = 2;
-            this.txtSaat.Name = "txtSaat";
-            this.txtSaat.Size = new System.Drawing.Size(26, 23);
-            this.txtSaat.TabIndex = 25;
+            this.pictureBox1.Image = global::PubgMusteriUygulamasi.Properties.Resources.maxresdefault;
+            this.pictureBox1.Location = new System.Drawing.Point(627, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(245, 152);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 25;
+            this.pictureBox1.TabStop = false;
             // 
-            // txtDakika
+            // dttmedtOyunSaat
             // 
-            this.txtDakika.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDakika.Location = new System.Drawing.Point(483, 187);
-            this.txtDakika.MaxLength = 2;
-            this.txtDakika.Name = "txtDakika";
-            this.txtDakika.Size = new System.Drawing.Size(26, 23);
-            this.txtDakika.TabIndex = 26;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(459, 185);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(18, 25);
-            this.label8.TabIndex = 27;
-            this.label8.Text = ":";
+            this.dttmedtOyunSaat.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dttmedtOyunSaat.Location = new System.Drawing.Point(427, 185);
+            this.dttmedtOyunSaat.Name = "dttmedtOyunSaat";
+            this.dttmedtOyunSaat.Size = new System.Drawing.Size(164, 20);
+            this.dttmedtOyunSaat.TabIndex = 25;
             // 
             // AnaMenu
             // 
@@ -519,18 +495,18 @@ namespace PubgMusteriUygulamasi
             this.kayıt.ResumeLayout(false);
             this.kayıt.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numOyunSayisi)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.m24BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pubgGameDataSet3)).EndInit();
             this.fillByOyunTarihToolStrip.ResumeLayout(false);
             this.fillByOyunTarihToolStrip.PerformLayout();
             this.fillByOyunSaatToolStrip.ResumeLayout(false);
             this.fillByOyunSaatToolStrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.m24BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pubgGameDataSet3)).EndInit();
             this.yenileToolStrip.ResumeLayout(false);
             this.yenileToolStrip.PerformLayout();
             this.fillByOyunSayiToolStrip.ResumeLayout(false);
             this.fillByOyunSayiToolStrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -579,8 +555,6 @@ namespace PubgMusteriUygulamasi
         private System.Windows.Forms.ToolStripButton yenileToolStripButton;
         private System.Windows.Forms.ToolStrip fillByOyunSayiToolStrip;
         private System.Windows.Forms.ToolStripButton fillByOyunSayiToolStripButton;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox txtDakika;
-        private System.Windows.Forms.TextBox txtSaat;
+        private System.Windows.Forms.DateTimePicker dttmedtOyunSaat;
     }
 }

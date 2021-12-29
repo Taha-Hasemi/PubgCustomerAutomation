@@ -59,9 +59,7 @@ namespace PubgMusteriUygulamasi
             this.label10 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.txtKayitSaat = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.txtDakika = new System.Windows.Forms.TextBox();
-            this.txtSaat = new System.Windows.Forms.TextBox();
+            this.dttmedtOyunSaat = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.numOyunSayisi)).BeginInit();
             this.SuspendLayout();
             // 
@@ -351,42 +349,20 @@ namespace PubgMusteriUygulamasi
             this.txtKayitSaat.Size = new System.Drawing.Size(164, 23);
             this.txtKayitSaat.TabIndex = 54;
             // 
-            // label11
+            // dttmedtOyunSaat
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(461, 193);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(18, 25);
-            this.label11.TabIndex = 58;
-            this.label11.Text = ":";
-            // 
-            // txtDakika
-            // 
-            this.txtDakika.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDakika.Location = new System.Drawing.Point(485, 195);
-            this.txtDakika.MaxLength = 2;
-            this.txtDakika.Name = "txtDakika";
-            this.txtDakika.Size = new System.Drawing.Size(26, 23);
-            this.txtDakika.TabIndex = 57;
-            // 
-            // txtSaat
-            // 
-            this.txtSaat.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSaat.Location = new System.Drawing.Point(429, 194);
-            this.txtSaat.MaxLength = 2;
-            this.txtSaat.Name = "txtSaat";
-            this.txtSaat.Size = new System.Drawing.Size(26, 23);
-            this.txtSaat.TabIndex = 56;
+            this.dttmedtOyunSaat.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dttmedtOyunSaat.Location = new System.Drawing.Point(428, 194);
+            this.dttmedtOyunSaat.Name = "dttmedtOyunSaat";
+            this.dttmedtOyunSaat.Size = new System.Drawing.Size(164, 20);
+            this.dttmedtOyunSaat.TabIndex = 56;
             // 
             // Guncelleme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(621, 386);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.txtDakika);
-            this.Controls.Add(this.txtSaat);
+            this.Controls.Add(this.dttmedtOyunSaat);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtKayitTarih);
@@ -458,8 +434,6 @@ namespace PubgMusteriUygulamasi
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.TextBox txtKayitSaat;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox txtDakika;
-        private System.Windows.Forms.TextBox txtSaat;
+        private System.Windows.Forms.DateTimePicker dttmedtOyunSaat;
     }
 }

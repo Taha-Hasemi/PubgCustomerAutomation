@@ -32,7 +32,7 @@ namespace PubgMusteriUygulamasi
                 hesapMail = txtHesapGmail.Text,
                 hesapSifre = txtHesapSifre.Text,
                 kullanilacakSilah = cmbKulanilacakSilah.Text,
-                oyunSaat = txtSaat.Text + ":" + txtDakika.Text,
+                oyunSaat = dttmedtOyunSaat.Text,
                 oyunTarih = dttmedtOyunTarihi.Text,
                 oyunSayi = Convert.ToInt32(numOyunSayisi.Value),
                 kayitSaat = (date.Hour + ":" + date.Minute).ToString(),
@@ -46,8 +46,6 @@ namespace PubgMusteriUygulamasi
             txtHesapId.Clear();
             txtHesapGmail.Clear();
             txtHesapSifre.Clear();
-            txtSaat.Clear();
-            txtDakika.Clear();
             numOyunSayisi.Value = 0;
         }
 

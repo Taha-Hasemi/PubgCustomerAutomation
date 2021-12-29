@@ -50,3 +50,4 @@ C:\Users\RTC9911\source\repos\PubgMusteriUygulamasi\PubgMusteriUygulamasi\bin\De
 C:\Users\RTC9911\source\repos\PubgMusteriUygulamasi\PubgMusteriUygulamasi\obj\Debug\PubgMusteriUygulamasi.AnaMenu.resources
 C:\Users\RTC9911\source\repos\PubgMusteriUygulamasi\PubgMusteriUygulamasi\obj\Debug\PubgMusteriUygulamasi.csproj.CopyComplete
 C:\Users\RTC9911\source\repos\PubgMusteriUygulamasi\PubgMusteriUygulamasi\obj\Debug\PubgMusteriUygulamasi.Guncelleme.resources
+C:\Users\RTC9911\source\repos\PubgMusteriUygulamasi\PubgMusteriUygulamasi\obj\Debug\PubgMusteriUygulamasi.Giris.resources

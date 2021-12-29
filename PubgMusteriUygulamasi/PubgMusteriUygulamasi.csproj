@@ -39,7 +39,9 @@
     <Reference Include="DevExpress.Sparkline.v20.2.Core, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v20.2, Version=20.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
@@ -63,14 +65,22 @@
     <Compile Include="DataBase\Baglanti.cs" />
     <Compile Include="DataBase\Deletes\Deletes.cs" />
     <Compile Include="DataBase\Inserts\KayitEkleme.cs" />
+    <Compile Include="DataBase\Selects\Login.cs" />
     <Compile Include="DataBase\Selects\Selects.cs" />
     <Compile Include="DataBase\Updates\Updates.cs" />
+    <Compile Include="Giris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris.Designer.cs">
+      <DependentUpon>Giris.cs</DependentUpon>
+    </Compile>
     <Compile Include="Guncelleme.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Guncelleme.Designer.cs">
       <DependentUpon>Guncelleme.cs</DependentUpon>
     </Compile>
+    <Compile Include="Kullanici.cs" />
     <Compile Include="Musteri.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,6 +106,9 @@
     </Compile>
     <EmbeddedResource Include="AnaMenu.resx">
       <DependentUpon>AnaMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris.resx">
+      <DependentUpon>Giris.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Guncelleme.resx">
       <DependentUpon>Guncelleme.cs</DependentUpon>

@@ -42,8 +42,7 @@ namespace PubgMusteriUygulamasi
                 txtHesapSifre.Text = oku["HesapSifre"].ToString();
                 numOyunSayisi.Value = Convert.ToDecimal(oku["oyunSayi"]);
                 cmbKulanilacakSilah.Text = oku["KullanilacakSilah"].ToString();
-                txtSaat.Text = oku["OyunSaat"].ToString().Remove(2);
-                txtDakika.Text = oku["OyunSaat"].ToString().Remove(0,3);
+                dttmedtOyunSaat.Value = Convert.ToDateTime(oku["OyunSaat"]);
                 dttmedtOyunTarihi.Value = Convert.ToDateTime(oku["OyunTarih"]);
                 txtKayitSaat.Text = oku["KayitSaat"].ToString();
                 txtKayitTarih.Text = oku["KayitTarih"].ToString();
@@ -82,8 +81,7 @@ namespace PubgMusteriUygulamasi
             cmbKulanilacakSilah.SelectedIndexChanged += txtadsoyad_TextChanged;
             numOyunSayisi.ValueChanged += txtadsoyad_TextChanged;
             dttmedtOyunTarihi.ValueChanged += txtadsoyad_TextChanged;
-            txtSaat.TextChanged += txtadsoyad_TextChanged;
-            txtDakika.TextChanged += txtadsoyad_TextChanged;
+            dttmedtOyunSaat.ValueChanged += txtadsoyad_TextChanged;
             txtKayitSaat.TextChanged += txtadsoyad_TextChanged;
             txtKayitTarih.TextChanged += txtadsoyad_TextChanged;
             cckbxTamamlanma.CheckedChanged += txtadsoyad_TextChanged;
@@ -107,7 +105,7 @@ namespace PubgMusteriUygulamasi
                 hesapMail = txtHesapGmail.Text,
                 hesapSifre = txtHesapSifre.Text,
                 kullanilacakSilah = cmbKulanilacakSilah.Text,
-                oyunSaat = txtSaat.Text + txtDakika.Text,
+                oyunSaat = dttmedtOyunSaat.Text,
                 oyunTarih = dttmedtOyunTarihi.Text,
                 oyunSayi = Convert.ToInt32(numOyunSayisi.Value),
                 tamamlanma = cckbxTamamlanma.Checked
